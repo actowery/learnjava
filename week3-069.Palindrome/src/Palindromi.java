@@ -3,8 +3,16 @@ import java.util.Scanner;
 public class Palindromi {
 
     public static boolean palindrome(String text) {
-        // write code here
-        return false;
+        if (text.length() <= 1) {
+            return true;
+        }
+        int end = text.length() -1;
+        for (int i = 0; i <= end/2; i++) {
+            if (text.charAt(i) != text.charAt(end-i)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args) {
