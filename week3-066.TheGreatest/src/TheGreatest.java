@@ -1,9 +1,12 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class TheGreatest {
     public static int greatest(ArrayList<Integer> list) {
         // write code here
-        return 0;
+        System.out.println(list);
+        Collections.sort(list);
+        System.out.println(list);
+        return list.get(list.size()-1);
     }
 
     public static void main(String[] args) {
